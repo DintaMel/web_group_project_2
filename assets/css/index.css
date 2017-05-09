@@ -1,0 +1,381 @@
+
+/*removes default spacing*/
+html, body, h1, h2, h3, p, ol, ul, li, a{
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+/*general text styling*/
+
+h1
+{
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.1em;
+  color: #303030;
+}
+
+h2{
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.56em;
+  color: #f2f2f2;
+}
+
+h2{
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.56em;
+  color: #f2f2f2;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+h2 a:hover{
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.56em;
+  color: #d49b30;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+h3{
+  font-family: 'Lato', sans-serif;
+  /*black (ie extra bold) font-weight*/
+  font-weight: 900;
+  font-size: 1.125em;
+  color: #8e5942;
+  text-transform: uppercase;
+}
+
+h4{
+  font-family: 'Lato', sans-serif;
+  /*light font-weight*/
+  font-weight: 300;
+  font-size: 1.125em;
+  color: #8e5942;
+  text-transform: uppercase;
+}
+
+p{
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  color: #303030;
+  line-height: 1.6em;
+}
+
+p a{
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  color: #be5f27;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: none;
+}
+
+p a:hover{
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  color: #d49b3c;
+  text-decoration: underline;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.light{
+  font-weight: 300;
+}
+
+img{
+  object-fit: contain;
+}
+
+.link-span{
+  color: #be5f27;
+
+}
+
+/*section specific styling*/
+
+nav{
+  background-color: #f2f2f2;
+  opacity: .9;
+  font-family: 'lato', sans-serif;
+  font-size: 1em;
+  text-align: center;
+  padding: 3%;
+}
+
+nav ul li{
+  font-family: 'Lato', sans-serif;
+  font-size: 1.06em;
+  color: #303030;
+  padding: 3%;
+  list-style: none;
+}
+
+nav ul li img{
+  width: 50%;
+}
+
+ul a:link, ul a:visited{
+  color: #303030;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.06em;
+}
+
+ul a:active{
+  color:#d49b30;
+}
+
+#index-intro h1{
+  color: #f2f2f2;
+  background-color: #be5f27;
+  text-align: center;
+  font-weight: normal;
+  padding: 3%;
+}
+
+#fix-description-div{
+  padding: 5%;
+}
+
+#fix-description-div p{
+  padding: 3%;
+  width: 100%;
+}
+
+#index-hours{
+  background-color: #8e5942;
+  padding: 3% 0;
+  text-align: center;
+}
+
+#index-hours p{
+  color: white;
+  font-size: 2.1em;
+}
+
+#index-marketing-section{
+  padding: 3%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.index-marketing-points{
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+}
+
+.reverse{
+  flex-direction: row-reverse;
+}
+
+.index-marketing-points p
+{
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  color: #c3bbac;
+  font-size: 3em;
+  line-height: .8em;
+  text-align: center;
+  padding: 3%;
+  text-transform: uppercase;
+}
+
+
+footer{
+  background-color: #be5f27;
+  padding: 3%;
+}
+
+footer p{
+  font-family: 'Oswald';
+  font-size: .9em;
+  color: #f2f2f2;
+  text-align: center;
+}
+
+footer img{
+  padding: 1%;
+}
+
+#footer-address, #footer-phone{
+  padding: .5%;
+  text-transform: uppercase;
+}
+
+#footer-img-div{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.desktop-only{
+  display: none;
+}
+
+/*styling for desktop version*/
+@media(min-width: 590px){
+/*undoes display none for desktop only items*/
+  .desktop-only{
+    display: unset;
+  }
+
+  .first{
+    order: 1;
+  }
+
+  .second{
+    order: 2;
+  }
+
+  .third{
+    order: 3;
+  }
+
+  .fourth{
+    order: 4;
+  }
+
+  .fifth{
+    order: 5;
+  }
+
+  nav{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    padding: 0;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav ul li img{
+    width: 70%;
+  }
+
+  .heroImage{
+    width:100%;
+    display: block;
+  }
+
+  #index-intro h1{
+    margin: auto;
+    width: 25%;
+    padding: 1%;
+    position: absolute;
+    z-index: 1;
+    left: 36%;
+  }
+
+  .side-by-side-container{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .side-by-side-div{
+    width: 40%;
+    padding: 5%;
+  }
+
+  #fix-description-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  #index-cake-flavors-div{
+    background-color: #c3bbac;
+  }
+
+  #index-cake-flavors-list{
+    list-style-type: none;
+    color: #f2f2f2;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 3.25em;
+    line-height: .8em;
+    text-align: center;
+    text-transform: uppercase;;
+  }
+
+  #index-cake-flavors-div img{
+    margin: auto;
+    display: block;
+  }
+
+  #index-hours{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .marketing-flex-container{
+    width: 100%;
+    display: flex;
+  }
+
+  .index-pic{
+      width: 66.66%;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+  }
+
+  #index-marketing-pic-1{
+    background-image: url("../images/fix-index-cake1.jpg");
+  }
+
+  #index-marketing-pic-2{
+    background-image: url("../images/fix-index-cake2.jpg");
+  }
+
+  #index-marketing-pic-3{
+    background-image: url("../images/fix-index-cake3.jpg");
+  }
+
+  #index-marketing-section{
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+
+  .index-marketing-points{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7% 0;
+    margin: auto;
+  }
+
+  footer{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  footer div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  #footer-img-div img{
+    padding: 1%;
+  }
+
+  }
+/*
+font declarations
+font-family: 'Lato', sans-serif;
+font-family: 'Oswald', sans-serif;*/
